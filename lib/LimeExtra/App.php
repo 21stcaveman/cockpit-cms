@@ -192,7 +192,7 @@ class App extends \Lime\App {
                 $this->helper('fs')->write($path, implode("\n", $contents));
             }
 
-            $url = $this->pathToUrl($path);
+            $url = $this->pathToUrl($path, TRUE);
             $list[] = '<script src="'.($url.($version ? "?ver={$version}":'')).'" type="text/javascript"></script>';
         }
 
